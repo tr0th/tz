@@ -1,0 +1,23 @@
+<h1>Algorithm checking</h1>
+
+<h2>Before sorting</h2>
+[% FOREACH item IN unsorted %]
+    [% item %]<span>&nbsp;</span>
+[% END %]
+
+<h2>After sorting</h2>
+
+[% FOREACH item IN sorted %]
+    [% item %]<span>&nbsp;</span>
+[% END %]
+
+<form name="task1" method=POST action="task1">
+    <input type="text" name="elem" value="">
+    <input type="submit" value="Check">
+</form>
+
+[% IF match == 1 %]
+    <p>MATCH</p>
+[% ELSE %]
+    <p>NOT_MATCH</p>
+[% END %]
